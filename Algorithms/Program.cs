@@ -58,8 +58,23 @@ foreach (var n in numbers)
     Console.Write($"{n} | ");
 }
 Console.WriteLine();
-Console.Write("Enter a number to search for: ");
-int number = int.Parse(Console.ReadLine() ?? "-1");
-Console.WriteLine();
-number = binSearch.Search(res, number);
+int number;
+number = binSearch.Search(res, 2);
 Console.WriteLine("Number = {0}", number);
+
+Console.WriteLine();
+
+Console.WriteLine("Euclid's algorithm:");
+EuclideanAlgorithm euclidAlg = new();
+Console.Write("Sub method: ");
+number = euclidAlg.Sub(3, 6);
+Console.WriteLine("Number = {0}", number);
+Console.Write("Residue method: ");
+number = euclidAlg.Residue(12, 8);
+Console.WriteLine("Number = {0}", number);
+Console.Write("Recursion method: ");
+number = euclidAlg.Recursion(12, 8);
+Console.WriteLine("Number = {0}", number);
+
+Console.WriteLine();
+

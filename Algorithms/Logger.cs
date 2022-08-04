@@ -2,7 +2,7 @@
 
 public static class Logger
 {
-    public static void Log(int[] array)
+    public static void LogArr(int[] array)
     {
         foreach (int value in array)
         {

@@ -46,3 +46,20 @@ BinaryExp binExp = new();
 int n1 = binExp.Power1(2, 3);
 int n2 = binExp.Power2(2, 4);
 Console.WriteLine("n1(2^3): {0}\nn2(2^4): {1}", n1, n2);
+
+Console.WriteLine();
+
+Console.WriteLine("Binary Search:");
+BinarySearch binSearch = new();
+Array.Sort(res);
+Console.Write("Source array: ");
+foreach (var n in numbers)
+{
+    Console.Write($"{n} | ");
+}
+Console.WriteLine();
+Console.Write("Enter a number to search for: ");
+int number = int.Parse(Console.ReadLine() ?? "-1");
+Console.WriteLine();
+number = binSearch.Search(res, number);
+Console.WriteLine("Number = {0}", number);

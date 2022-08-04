@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Algorithms.Math
+﻿namespace Algorithms.Math
 {
     public class BinaryExp
     {

@@ -78,3 +78,7 @@ Console.WriteLine("Number = {0}", number);
 
 Console.WriteLine();
 
+Console.WriteLine("Sieve of Eratosthenes:");
+PrimesSieve sieve = new();
+res = sieve.Run(30);
+Logger.LogArr(res);

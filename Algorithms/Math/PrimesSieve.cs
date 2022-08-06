@@ -4,29 +4,26 @@
     {
         public int[] Run(int n)
         {
-            bool[] mark = new bool[n];
-            for (int i = 0; i < mark.Length; i++)
+            bool[] prime = new bool[n + 1];
+            List<int> primes = new();
+            for (int i = 2; i < prime.Length; i++)
             {
-                mark[i] = true;
+                prime[i] = true;
             }
-            List<int> primes = new()
+            int limit = (int)System.Math.Ceiling(System.Math.Sqrt(n));
+            for (int i = 2; i <= limit; i++)
             {
-                2
-            };
-            for (int i = 3; i * i <= n; i += 2)
-            {
-                if (mark[i])
+                if (prime[i])
                 {
-                    for (int j = i * i; j < n; j += i)
+                    for (int j = i * i; j < prime.Length; j += i)
                     {
-                        mark[j] = false;
+                        prime[j] = false;
                     }
                 }
             }
-
-            for (int i = 3; i < mark.Length; i += 2)
+            for (int i = 2; i < prime.Length; i++)
             {
-                if (mark[i])
+                if (prime[i])
                 {
                     primes.Add(i);
                 }

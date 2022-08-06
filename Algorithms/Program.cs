@@ -82,3 +82,18 @@ Console.WriteLine("Sieve of Eratosthenes:");
 PrimesSieve sieve = new();
 res = sieve.Run(30);
 Logger.LogArr(res);
+
+Console.WriteLine();
+
+Console.WriteLine("Matrix multiplication:");
+MatrixMul matMul = new();
+int[,] matrix = matMul.MatrixMultiplication(new int[,] { { 1, 2, 3 }, { 3, 4, 5 } }, new int[,] { { 1, 2, 3 }, { 3, 4, 5 }, { 6, 7, 8 } });
+try
+{
+    matMul.PrintMatrix(matrix);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+

@@ -17,8 +17,7 @@
         public int Phi(int n)
         {
             int result =  n;
-            int sqrt = (int)System.Math.Sqrt(n);
-            for (int i = 2; i <= sqrt; i++) // or (i^2 <= n)
+            for (int i = 2; i <= System.Math.Sqrt(n); i++) // or (i^2 <= n)
             {
                 if (n % i == 0)
                 {

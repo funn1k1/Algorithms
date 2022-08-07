@@ -97,3 +97,9 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
 }
 
+Console.WriteLine();
+
+Console.WriteLine("Euler function:");
+EulerFunction euler = new();
+Console.WriteLine("Simple Euler function for N = 5: " + euler.SimplePhi(5));
+Console.WriteLine("Euler function for N = 5: " + euler.Phi(5));
